@@ -14,7 +14,6 @@ class ParlourDataMapper < Parlour::Plugin
     resources.each do |resource|
       root.path(resource) do |klass|
         # Iterate over each object property for this resource
-        p resource.associations
         resource.properties.each do |prop|
           type_string = PROPERTIES_TO_TYPES[prop.class]
 
