@@ -1,10 +1,10 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "parlour/datamapper/version"
+require_relative "lib/parlour-datamapper"
 
 Gem::Specification.new do |spec|
   spec.name          = "parlour-datamapper"
-  spec.version       = Parlour::Datamapper::VERSION
+  spec.version       = ParlourDataMapper::VERSION
   spec.authors       = ["Aaron Christiansen"]
   spec.email         = ["aaronc20000@gmail.com"]
 
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "parlour", "~> 0.5.0"
+  spec.add_dependency "parlour", "~> 0.5.1"
 
   spec.add_development_dependency "bundler", "~> 2.0"
 end
